@@ -9,7 +9,7 @@ pipeline {
     stage ('Install dependencies') {
       steps {
         sh "echo $PATH"
-        sh "npx install"
+        sh "npm install"
       }
     }
     stage ('Build') {
