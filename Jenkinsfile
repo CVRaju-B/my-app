@@ -8,13 +8,18 @@ pipeline {
   stages {
     stage ('Checkout Code') {
       steps {
-        checkout scm
+        echo 'checkout scm'
       }
     }
     stage ('Install dependencies') {
       steps {
         sh "echo $PATH"
         sh "npm install"
+      }
+    }
+    stage ('Build') {
+      steps {
+        echo 'building...'
       }
     }
   }
